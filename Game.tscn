@@ -1,0 +1,132 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scripts/Game.gd" type="Script" id=1]
+[ext_resource path="res://WaterPlain0012_2_download600.jpg" type="Texture" id=2]
+[ext_resource path="res://Scripts/Water.gd" type="Script" id=3]
+[ext_resource path="res://decking.jpg" type="Texture" id=4]
+[ext_resource path="res://Carrier.png" type="Texture" id=5]
+[ext_resource path="res://Scripts/Menu.gd" type="Script" id=6]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+
+render_priority = 0
+blend_mode = 0
+light_mode = 0
+_sections_unfolded = [ "Resource" ]
+
+[node name="Node2D" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+t = 0
+
+[node name="Water" type="Sprite" parent="." index="0"]
+
+material = SubResource( 1 )
+position = Vector2( 0, -0.225006 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 288, 512 )
+script = ExtResource( 3 )
+_sections_unfolded = [ "Material", "Offset", "Region", "Transform" ]
+
+[node name="Boats" type="Sprite" parent="." index="1"]
+
+[node name="Decking" type="Sprite" parent="." index="2"]
+
+position = Vector2( 0, 245 )
+rotation = -1.5708
+texture = ExtResource( 4 )
+
+[node name="Camera2D" type="Camera2D" parent="." index="3"]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1.5, 1.5 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+
+[node name="Player" type="Sprite" parent="." index="4"]
+
+position = Vector2( 0, 155 )
+scale = Vector2( 1.875, 1.875 )
+texture = ExtResource( 5 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="5"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="Node2D" type="Node2D" parent="CanvasLayer" index="0"]
+
+pause_mode = 2
+_sections_unfolded = [ "Pause" ]
+
+[node name="Button" type="Button" parent="CanvasLayer/Node2D" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 15.0
+margin_top = 75.0
+margin_right = 130.0
+margin_bottom = 95.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Play"
+flat = false
+align = 1
+script = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="CanvasLayer/Node2D" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 25.0
+margin_top = 60.0
+margin_right = 122.0
+margin_bottom = 74.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Stop the Boats!"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+
