@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=1]
 [ext_resource path="res://WaterPlain0012_2_download600.jpg" type="Texture" id=2]
@@ -6,10 +6,11 @@
 [ext_resource path="res://decking.jpg" type="Texture" id=4]
 [ext_resource path="res://Carrier.png" type="Texture" id=5]
 [ext_resource path="res://Scripts/Menu.gd" type="Script" id=6]
-[ext_resource path="res://osb_left.png" type="Texture" id=7]
-[ext_resource path="res://osb_right.png" type="Texture" id=8]
-[ext_resource path="res://shoot.png" type="Texture" id=9]
-[ext_resource path="res://Music/Kirby Wave Ride.ogg" type="AudioStream" id=10]
+[ext_resource path="res://Hack-Regular.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://osb_left.png" type="Texture" id=8]
+[ext_resource path="res://osb_right.png" type="Texture" id=9]
+[ext_resource path="res://shoot.png" type="Texture" id=10]
+[ext_resource path="res://Music/Kirby Wave Ride.ogg" type="AudioStream" id=11]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 
@@ -17,6 +18,14 @@ render_priority = 0
 blend_mode = 0
 light_mode = 0
 _sections_unfolded = [ "Resource" ]
+
+[sub_resource type="DynamicFont" id=4]
+
+size = 15
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 7 )
+_sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFontData" id=2]
 
@@ -145,9 +154,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 25.0
-margin_top = 60.0
-margin_right = 122.0
+margin_left = -35.0
+margin_top = 55.0
+margin_right = 185.0
 margin_bottom = 74.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -155,17 +164,19 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_fonts/font = SubResource( 4 )
 text = "Stop the Boats!"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="." index="6"]
 
 position = Vector2( -100, 145 )
 scale = Vector2( 0.609375, 0.609375 )
-normal = ExtResource( 7 )
+normal = ExtResource( 8 )
 pressed = null
 bitmask = null
 shape = null
@@ -179,7 +190,7 @@ visibility_mode = 1
 
 position = Vector2( -55, 145 )
 scale = Vector2( 0.609375, 0.609375 )
-normal = ExtResource( 8 )
+normal = ExtResource( 9 )
 pressed = null
 bitmask = null
 shape = null
@@ -193,7 +204,7 @@ visibility_mode = 1
 
 position = Vector2( 55, 140 )
 scale = Vector2( 0.609375, 0.609375 )
-normal = ExtResource( 9 )
+normal = ExtResource( 10 )
 pressed = null
 bitmask = null
 shape = null
@@ -205,7 +216,7 @@ visibility_mode = 1
 
 [node name="BGM" type="AudioStreamPlayer2D" parent="." index="9"]
 
-stream = ExtResource( 10 )
+stream = ExtResource( 11 )
 volume_db = 0.0
 autoplay = true
 max_distance = 2000.0
