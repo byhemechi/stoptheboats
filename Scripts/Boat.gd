@@ -12,6 +12,6 @@ func _process(delta):
 	rotation += ((atan2(-xspeed, speed) + PI / 2) - rotation) / 2
 	if position.y > 110:
 		root.get_node("CanvasLayer/Node2D").show()
-		root.get_node("CanvasLayer/Node2D/Label").text = "You lasted " + str(floor(root.t)) + "s"
+		root.get_node("CanvasLayer/Node2D/Label").text = "You lasted " + root.time()
 		root.get_node("CanvasLayer/Node2D/Button").text = "Try Again"
 		get_tree().paused = true

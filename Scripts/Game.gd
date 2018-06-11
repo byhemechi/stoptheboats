@@ -11,6 +11,14 @@ func Shoot(x, y):
 	add_child(shot)
 	shot.position.x = x
 	shot.position.y = y
+	
+func time():
+	var mins = floor(t / 60)
+	var secs = int(t) % 60
+	if t > 60:
+		return str(mins) + "m " + str(floor(secs)) + "s"
+	else:
+		return str(floor(secs)) + "s"
 
 func AddBoat(type):
 	var new
@@ -25,10 +33,10 @@ func AddBoat(type):
 	$Boats.add_child(new)
 
 func _process(delta):
-	if randi() % 100 < 1:
+	if (randi() % 100 < ceil(t / 30)) || int(round(t * 5) + 3) % 180 == 0:
 		AddBoat(round(rand_range(0,1)))
 	t += delta
-
+	$Time.text = time()
 	var player = $Player
 	if Input.is_action_pressed("ui_right"):
 		player.position.x += 150 * delta
