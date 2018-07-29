@@ -3,7 +3,9 @@
 [ext_resource path="res://Scripts/Boat.gd" type="Script" id=1]
 [ext_resource path="res://eLex-elegance-top.png" type="Texture" id=2]
 
-[node name="Boat1" type="Area2D"]
+[node name="Boat1" type="Area2D" groups=[
+"boat",
+]]
 
 rotation = 1.5708
 input_pickable = true
@@ -16,11 +18,13 @@ audio_bus_name = "Master"
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 speed = 20
+health = 100
 xspeed = 0
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
 texture = ExtResource( 2 )
+_sections_unfolded = [ "Region", "Transform", "Visibility" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
 

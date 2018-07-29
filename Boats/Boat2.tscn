@@ -9,7 +9,9 @@ custom_solver_bias = 0.0
 radius = 15.0
 height = 50.0
 
-[node name="Boat2" type="Area2D"]
+[node name="Boat2" type="Area2D" groups=[
+"boat",
+]]
 
 rotation = 1.5708
 input_pickable = true
@@ -22,6 +24,7 @@ audio_bus_name = "Master"
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 speed = 20
+health = 100
 xspeed = 0
 
 [node name="Sprite" type="Sprite" parent="." index="0"]

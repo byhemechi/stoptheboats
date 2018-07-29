@@ -6,11 +6,15 @@ func start():
 	root.get_node("Player").position.x = 0
 	for i in root.get_node("Boats").get_children():
 		i.queue_free()
+	root.weapons[1] = 0
+	root.weapons[2] = 0
 	get_tree().paused = false
 	get_parent().hide()
 	
+func _process(delta):
+	if Input.is_action_just_pressed("ui_accept") && get_tree().paused:
+		start()
 
 func _ready():
-	
 	get_tree().paused = true
 	connect("pressed", self, "start")
