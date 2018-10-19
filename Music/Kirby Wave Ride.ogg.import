@@ -7,10 +7,7 @@ path="res://.import/Kirby Wave Ride.ogg-cec7dc1ea0f6786a8faecda8da3528a6.oggstr"
 [deps]
 
 source_file="res://Music/Kirby Wave Ride.ogg"
-source_md5="2cb05930d19d7ecc78cfc72ac533e5fa"
-
 dest_files=[ "res://.import/Kirby Wave Ride.ogg-cec7dc1ea0f6786a8faecda8da3528a6.oggstr" ]
-dest_md5="c37189d3863b894ef47e7ca3267b8285"
 
 [params]
 

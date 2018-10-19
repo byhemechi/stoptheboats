@@ -107,8 +107,8 @@ func _process(delta):
 		weapons[weapon] = maxa[weapon]
 	if Input.is_action_pressed("shoot"):
 		if weapon == 1:
-			if lastshot > 0.1 && weapons[1] > 0:
-				Shoot(player.position.x, player.position.y - 30,  rand_range(-0.1, 0.1), 60, 500)
+			if lastshot > 0.03 && weapons[1] > 0:
+				Shoot(player.position.x, player.position.y - 30,  rand_range(-0.1, 0.1), 20, 500)
 				weapons[1] -= 1
 				lastshot = 0
 		elif weapon == 2:

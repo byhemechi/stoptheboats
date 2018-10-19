@@ -7,10 +7,7 @@ path="res://.import/shoot.png-5a59de96a70dd2f0cb2bac43bc9f2f61.stex"
 [deps]
 
 source_file="res://shoot.png"
-source_md5="99a276197ee76a83312af783f33f0ab3"
-
 dest_files=[ "res://.import/shoot.png-5a59de96a70dd2f0cb2bac43bc9f2f61.stex" ]
-dest_md5="977d51633748d45e85e4c7a214ade70e"
 
 [params]
 

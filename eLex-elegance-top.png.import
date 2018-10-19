@@ -7,10 +7,7 @@ path="res://.import/eLex-elegance-top.png-f4345c82f456dd64956b0d9a51421010.stex"
 [deps]
 
 source_file="res://eLex-elegance-top.png"
-source_md5="e179690eeda6fcf43d62fe1a95202384"
-
 dest_files=[ "res://.import/eLex-elegance-top.png-f4345c82f456dd64956b0d9a51421010.stex" ]
-dest_md5="9c8c1229f84c1784b6d278d80c299505"
 
 [params]
 

@@ -147,7 +147,7 @@ _sections_unfolded = [ "Pause" ]
 
 [node name="Polygon2D" type="Polygon2D" parent="CanvasLayer/Node2D" index="0"]
 
-position = Vector2( 89.5833, 73.1326 )
+position = Vector2( -10, 25 )
 scale = Vector2( 3.91667, 2.25301 )
 polygon = PoolVector2Array( -125, -210, 115, -210, 115, 205, -125, 205 )
 uv = PoolVector2Array(  )

@@ -7,10 +7,7 @@ path="res://.import/ammo.png-25a337dd55fba2517d680a6374ca2721.stex"
 [deps]
 
 source_file="res://ammo.png"
-source_md5="a38f5f1c7b4338fd35f851a9c1079237"
-
 dest_files=[ "res://.import/ammo.png-25a337dd55fba2517d680a6374ca2721.stex" ]
-dest_md5="3211e68afbb7a320cf409e91d9ed241e"
 
 [params]
 

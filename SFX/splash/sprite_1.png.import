@@ -7,10 +7,7 @@ path="res://.import/sprite_1.png-288a6b30da86a33f877dd61801b01e8b.stex"
 [deps]
 
 source_file="res://SFX/splash/sprite_1.png"
-source_md5="280522a2148bd16c234ed02e33817a76"
-
 dest_files=[ "res://.import/sprite_1.png-288a6b30da86a33f877dd61801b01e8b.stex" ]
-dest_md5="a584423c3dfaea3ed2447bf5d9011b3f"
 
 [params]
 
